@@ -14,5 +14,4 @@ switchBtn.addEventListener('click', changeTempChart);
 
 setAvatar();
 setHeaderDate();
-
 renderData()
