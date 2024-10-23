@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alex Filimonov">
+    <meta name="description" content="Gain knowledge on working with weather API">
+    <link rel="shortcut icon" href="./images/weather-app-icon.ico" type="image/x-icon">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="avatar-block">
+                <div class="avatar-wrapper">
+                    <img class="avatar" src="./images/duck-default-avatar.jpg" alt="avatar">
+                </div>
+                <div class="avatar-text-wrapper">
+                    <p>Hey, there 👋🏼</p>
+                    <p class="header-date"></p>
+                </div>
+            </div>
+            <div class="search-block">
+                <div class="search-wrapper">
+                    <button class="search-button" type="button">
+                        <svg>
+                            <use href="./images/search-icon.svg#icon-search"/>
+                        </svg>
+                    </button>
+                    <input class="search-input" type="text" placeholder="Search city">
+                </div>
+                <div class="switches">
+                    <label class="switch-label" for="switch">
+                        <input type="checkbox" id="switch">
+                        <span class="chart">&#8451;</span>
+                    </label>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-data">
+                <div class="main-data-top">
+                    <div>
+                        <img class="weather-img" src="./images/duck-default-avatar.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="city">City</p>
+                        <p class="country">Country</p>
+                    </div>
+                    <div>
+                        <p class="temperature">18C</p>
+                        <p class="temperature-text">Temperature</p>
+                    </div>
+                    <div>
+                        <p class="humidity">74%</p>
+                        <p class="humidity-text">Humidity</p>
+                    </div>
+                    <div>
+                        <p class="speed">7<span>km/h</span></p>
+                        <p class="speed-text">Wind Speed</p>
+                    </div>
+                </div>
+                <div class="main-data-bottom">
+                    <ul class="hourly-weather" id="hourlyWeather"></ul>
+                </div>
+            </div>
+            <div class="forecast">
+                <h2>Forecast</h2>
+                <div class="forecast-wrapper">
+                    <ul class="forecast-list"></ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

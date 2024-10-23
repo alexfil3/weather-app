@@ -1,0 +1,381 @@
+:root {
+    --8px: 0.5rem;
+    --10px: 0.625rem;
+    --14px: 0.875rem;
+    --16px: 1rem;
+    --17px: 1.0625rem;
+    --18px: 1.125rem;
+    --19px: 1.1875rem;
+    --20px: 1.25rem;
+    --21px: 1.3125rem;
+    --24px: 1.5rem;
+    --48px: 3rem;
+
+    --main-bg-color: #1e1f24;
+    --input-bg-color: #2e2e38;
+    --secondary-bg-color: #1B1F3B;
+    --hover-bg-color: #2A2D34;
+    --card-bg-color: #cbe6e9;
+    --main-text-color: #F1F1F1;
+    --secondary-text-color: #C9A635;
+    --green-color: #008000;
+    --yellow-color: #ffde21;
+    --red-color: #cd1c18;
+}
+
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+/* My styles */
+
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('./fonts/poppins-regular-webfont.woff2') format('woff2'),
+         url('./fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppinsbold';
+    src: url('./fonts/poppins-bold-webfont.woff2') format('woff2'),
+         url('./fonts/poppins-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppinsitalic';
+    src: url('./fonts/poppins-italic-webfont.woff2') format('woff2'),
+         url('./fonts/poppins-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "poppinsregular", sans-serif;
+    font-size: var(--16px);
+    line-height: 1.6;
+    letter-spacing: 0.12rem;
+    background-color: var(--main-bg-color);
+    color: white;
+}
+
+.container {
+    padding: 0 10%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.avatar-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-date {
+    font-size: var(--24px);
+}
+
+.search-block {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-button {
+    position: absolute;
+    left: 6px;
+    top: 12px;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.search-input {
+    background-color: var(--input-bg-color);
+    padding: 12px 6px 12px 34px;
+    border-radius: 20px;
+}
+
+.search-input:focus-visible {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+}
+
+/* Custom Switches */
+
+.switches input {
+    appearance: none;
+    position: relative;
+    display: inline-block;
+    background-color: var(--input-bg-color);
+    height: 40px;
+    width: 60px;
+    vertical-align: middle;
+    border-radius: 2rem;
+    box-shadow: 0px 1px 3px #0003 inset;
+    transition: background-color 0.25s linear;
+}
+
+.switches input::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 1.2rem;
+    top: 6px;
+    left: 0.2rem;
+    box-shadow: 0px 1px 3px #0003;
+    transition: transform 0.25s linear;
+}
+
+.switches input:checked:before {
+    transform: translateX(26px);
+}
+
+.switches input:focus {
+  outline-color: transparent;
+}
+
+.switches input:focus-visible {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+}
+
+.switch-label {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.chart {
+    display: block;
+    width: 20px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    grid-template-areas: 
+    'main-data'
+    'forecast';
+}
+
+.main-data {
+    grid-area: main-data;
+    background-color: #2e2e38;
+    border-radius: 12px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.main-data-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.main-data-bottom, .forecast-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+    padding-bottom: 14px;
+}
+
+.main-data-bottom::-webkit-scrollbar,
+.forecast-wrapper::-webkit-scrollbar {
+    height: 4px;
+}
+
+.main-data-bottom::-webkit-scrollbar-track,
+.forecast-wrapper::-webkit-scrollbar-track {
+    background: var(--hover-bg-color);
+    border-radius: 20px;
+}
+
+.main-data-bottom::-webkit-scrollbar-thumb,
+.forecast-wrapper::-webkit-scrollbar-thumb {
+    background: var(--main-text-color);
+    border-radius: 20px;
+}
+
+.hourly-weather,
+.forecast-list {
+    display: flex;
+    gap: 40px;
+}
+
+.weather-img {
+    width: 80px;
+}
+
+.city, .temperature, .humidity, .speed {
+    font-size: var(--24px);
+}
+
+.country, .temperature-text, .humidity-text, .speed-text {
+    font-size: var(--14px);
+}
+
+.hourly-image {
+    width: 40px;
+}
+
+.hourly-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--card-bg-color);
+    border-radius: 20px;
+    padding: 12px;
+    color: black;
+}
+
+.forecast {
+    grid-area: forecast;
+    border-radius: 12px;
+    padding: 40px;
+    overflow: hidden;
+    background-color: #2e2e38;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(30, 31, 36, 255);
+    padding: 20px;
+    border-radius: 20px;
+    gap: 12px;
+    flex-basis: 400px;
+}
+
+.item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
